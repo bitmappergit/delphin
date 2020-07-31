@@ -393,3 +393,5 @@ PolyML.Compiler.debug := true;
 use "frontend/delphin.sig";
 use "frontend/delphin.fun";
 use "frontend/delphin.sml";
+
+fun main _ = Delphin.top ();

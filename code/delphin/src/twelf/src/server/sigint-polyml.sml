@@ -6,7 +6,7 @@ struct
 	val origIntHandler =
 	    Signal.signal (Posix.Signal.int,
 			   Signal.SIG_HANDLE (fn n => (print "\ninterrupt\n";
-						       Process.interruptConsoleProcesses ())))
+						       Thread.Thread.broadcastInterrupt ())))
 	(*
 	val _ = print
 "Upon interrupt at prompt => type\n\
